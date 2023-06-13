@@ -14,8 +14,8 @@ test('Registration page validation', async ({ page }) => {
     await test.step(`Check email address`, async () => {
         await page.locator('input[name="emailRegisterPage"]').type('aaa');
         await page.locator('input[name="passwordRegisterPage"]').click();;
-        await expect(page.getByText("Your email address is not formatted correctly", { exact: true })).toBeVisible;
-        //"Your email address is not formatted correctly"
+        await expect(page.getByText("Your email address isn't formatted correctly", { exact: true })).toBeVisible;
+        //"Your email address is not formatted correctly" this should read
     });
     
 })
